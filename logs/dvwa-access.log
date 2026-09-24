@@ -1,0 +1,300 @@
+172.17.0.1 - - [23/Sep/2026:15:50:47 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:15:50:47 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:15:50:47 +0000] "GET /vulnerabilities/brute/?username=admin&password=wrongpass&Login=Login HTTP/1.1" 200 1804 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:15:50:47 +0000] "GET /vulnerabilities/brute/?username=admin&password=password&Login=Login HTTP/1.1" 200 1821 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:15:51:23 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:15:51:23 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:15:51:23 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:15:51:23 +0000] "GET /vulnerabilities/brute/?username=admin&password=password&Login=Login HTTP/1.1" 200 4741 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:51:23 +0000] "GET /vulnerabilities/brute/?username=admin&password=wrongpass&Login=Login HTTP/1.1" 200 4703 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:51:23 +0000] "GET /vulnerabilities/brute/?username=notexist&password=password&Login=Login HTTP/1.1" 200 4703 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:51:23 +0000] "GET /vulnerabilities/brute/?username=a&password=password&Login=Login HTTP/1.1" 200 4703 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:53:08 +0000] "GET /vulnerabilities/brute/?username=admin&password=&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:30 +0000] "GET /vulnerabilities/brute/?username=admin&password=&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:30 +0000] "GET /vulnerabilities/brute/?username=admin&password=&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:30 +0000] "GET /vulnerabilities/brute/?username=admin&password=123456&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:30 +0000] "GET /vulnerabilities/brute/?username=admin&password=12345678&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:30 +0000] "GET /vulnerabilities/brute/?username=admin&password=qwerty&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:31 +0000] "GET /vulnerabilities/brute/?username=admin&password=123456789&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:31 +0000] "GET /vulnerabilities/brute/?username=admin&password=12345&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:31 +0000] "GET /vulnerabilities/brute/?username=admin&password=1234&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:31 +0000] "GET /vulnerabilities/brute/?username=admin&password=111111&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:32 +0000] "GET /vulnerabilities/brute/?username=admin&password=1234567&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:32 +0000] "GET /vulnerabilities/brute/?username=admin&password=dragon&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:32 +0000] "GET /vulnerabilities/brute/?username=admin&password=123123&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:33 +0000] "GET /vulnerabilities/brute/?username=admin&password=baseball&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:33 +0000] "GET /vulnerabilities/brute/?username=admin&password=abc123&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:33 +0000] "GET /vulnerabilities/brute/?username=admin&password=football&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:34 +0000] "GET /vulnerabilities/brute/?username=admin&password=monkey&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:34 +0000] "GET /vulnerabilities/brute/?username=admin&password=letmein&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:35 +0000] "GET /vulnerabilities/brute/?username=admin&password=696969&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:35 +0000] "GET /vulnerabilities/brute/?username=admin&password=shadow&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:36 +0000] "GET /vulnerabilities/brute/?username=admin&password=master&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:37 +0000] "GET /vulnerabilities/brute/?username=admin&password=666666&Login=Login HTTP/1.1" 200 1804 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:39 +0000] "GET /vulnerabilities/brute/?username=admin&password=qwertyuiop&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:40 +0000] "GET /vulnerabilities/brute/?username=admin&password=123321&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:41 +0000] "GET /vulnerabilities/brute/?username=admin&password=mustang&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:42 +0000] "GET /vulnerabilities/brute/?username=admin&password=1234567890&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:42 +0000] "GET /vulnerabilities/brute/?username=admin&password=michael&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:43 +0000] "GET /vulnerabilities/brute/?username=admin&password=654321&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:44 +0000] "GET /vulnerabilities/brute/?username=admin&password=superman&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:45 +0000] "GET /vulnerabilities/brute/?username=admin&password=1qaz2wsx&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:46 +0000] "GET /vulnerabilities/brute/?username=admin&password=7777777&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:47 +0000] "GET /vulnerabilities/brute/?username=admin&password=121212&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:48 +0000] "GET /vulnerabilities/brute/?username=admin&password=000000&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:49 +0000] "GET /vulnerabilities/brute/?username=admin&password=qazwsx&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:50 +0000] "GET /vulnerabilities/brute/?username=admin&password=123qwe&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:51 +0000] "GET /vulnerabilities/brute/?username=admin&password=killer&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:52 +0000] "GET /vulnerabilities/brute/?username=admin&password=trustno1&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:53 +0000] "GET /vulnerabilities/brute/?username=admin&password=jordan&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+127.0.0.1 - - [23/Sep/2026:15:55:54 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.25 (Debian) (internal dummy connection)"
+172.17.0.1 - - [23/Sep/2026:15:55:54 +0000] "GET /vulnerabilities/brute/?username=admin&password=jennifer&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:55 +0000] "GET /vulnerabilities/brute/?username=admin&password=zxcvbnm&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:56 +0000] "GET /vulnerabilities/brute/?username=admin&password=asdfgh&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:57 +0000] "GET /vulnerabilities/brute/?username=admin&password=hunter&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:55:59 +0000] "GET /vulnerabilities/brute/?username=admin&password=buster&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+127.0.0.1 - - [23/Sep/2026:15:56:00 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.25 (Debian) (internal dummy connection)"
+172.17.0.1 - - [23/Sep/2026:15:56:00 +0000] "GET /vulnerabilities/brute/?username=admin&password=soccer&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:01 +0000] "GET /vulnerabilities/brute/?username=admin&password=harley&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:02 +0000] "GET /vulnerabilities/brute/?username=admin&password=batman&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:04 +0000] "GET /vulnerabilities/brute/?username=admin&password=andrew&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:05 +0000] "GET /vulnerabilities/brute/?username=admin&password=tigger&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:06 +0000] "GET /vulnerabilities/brute/?username=admin&password=sunshine&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:08 +0000] "GET /vulnerabilities/brute/?username=admin&password=iloveyou&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:10 +0000] "GET /vulnerabilities/brute/?username=admin&password=password&Login=Login HTTP/1.1" 200 1822 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+127.0.0.1 - - [23/Sep/2026:15:56:11 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.25 (Debian) (internal dummy connection)"
+172.17.0.1 - - [23/Sep/2026:15:56:11 +0000] "GET /vulnerabilities/brute/?username=admin&password=admin&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:12 +0000] "GET /vulnerabilities/brute/?username=admin&password=root&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:14 +0000] "GET /vulnerabilities/brute/?username=admin&password=toor&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:15 +0000] "GET /vulnerabilities/brute/?username=admin&password=test&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:15:56:17 +0000] "GET /vulnerabilities/brute/?username=admin&password=guest&Login=Login HTTP/1.1" 200 1805 "http://127.0.0.1:8080/vulnerabilities/brute/?username=shit&password=fuckyou&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+127.0.0.1 - - [23/Sep/2026:15:56:20 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.25 (Debian) (internal dummy connection)"
+127.0.0.1 - - [23/Sep/2026:15:56:22 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.25 (Debian) (internal dummy connection)"
+127.0.0.1 - - [23/Sep/2026:15:56:23 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.25 (Debian) (internal dummy connection)"
+127.0.0.1 - - [23/Sep/2026:15:56:25 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.25 (Debian) (internal dummy connection)"
+172.17.0.1 - - [23/Sep/2026:16:02:20 +0000] "GET /login.php HTTP/1.1" 200 1193 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:02:20 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:02:20 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:02:20 +0000] "GET /vulnerabilities/exec/ HTTP/1.1" 200 1715 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:02:20 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1896 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:03:49 +0000] "GET /vulnerabilities/exec/ HTTP/1.1" 200 1716 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:04:54 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1896 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:13:24 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1901 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:13:49 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1896 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:13:56 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1904 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:14:15 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:14:15 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:14:15 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:14:15 +0000] "GET /vulnerabilities/view_source.php?id=exec&security=low HTTP/1.1" 200 1361 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:14:15 +0000] "GET /vulnerabilities/view_source.php?id=exec&security=medium HTTP/1.1" 200 1502 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:14:15 +0000] "GET /vulnerabilities/view_source.php?id=exec&security=high HTTP/1.1" 200 1549 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:14:15 +0000] "GET /vulnerabilities/view_source.php?id=exec&security=impossible HTTP/1.1" 200 1797 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:16:21 +0000] "GET /vulnerabilities/exec/ HTTP/1.1" 200 1716 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:16:38 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1923 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:16:41 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1926 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:18:51 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1897 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:19:06 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1896 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:19:43 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1728 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:20:08 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1905 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:20:29 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1893 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:21:05 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1722 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:21:07 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+
+==> /var/log/apache2/error.log <==
+ping: missing host operand
+Try 'ping --help' or 'ping --usage' for more information.
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:21:08 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:21:27 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1901 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:21:51 +0000] "GET /login.php HTTP/1.1" 200 1193 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:21:51 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:21:51 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:21:51 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1901 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:21:54 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1901 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:21:57 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1896 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:00 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1810 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:14 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1727 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:17 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1904 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:20 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:20 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:22:37 +0000] "GET /login.php HTTP/1.1" 200 1193 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:37 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:37 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:37 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1895 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:40 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1897 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:46 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1896 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:22:52 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:22:56 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1733 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:23:00 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1901 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:23:03 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1899 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:23:06 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1897 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:23:32 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:23:32 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:23:32 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:23:32 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1895 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:23:39 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1897 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:16:23:46 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1729 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:23:49 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1904 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:23:52 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1916 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:16:26:15 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1901 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:16:26:17 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1905 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:05:52 +0000] "GET /vulnerabilities/exec/ HTTP/1.1" 200 1716 "http://127.0.0.1:8080/vulnerabilities/brute/?username=admin&password=&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:05:53 +0000] "GET / HTTP/1.1" 200 3010 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:05:54 +0000] "GET /instructions.php HTTP/1.1" 200 5455 "http://127.0.0.1:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:05:55 +0000] "GET / HTTP/1.1" 200 3010 "http://127.0.0.1:8080/instructions.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:06:45 +0000] "GET /security.php HTTP/1.1" 200 2453 "http://127.0.0.1:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:06:45 +0000] "GET /dvwa/images/lock.png HTTP/1.1" 200 1045 "http://127.0.0.1:8080/security.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:06:48 +0000] "POST /security.php HTTP/1.1" 302 427 "http://127.0.0.1:8080/security.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:06:48 +0000] "GET /security.php HTTP/1.1" 200 2474 "http://127.0.0.1:8080/security.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:06:51 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1905 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [23/Sep/2026:17:07:34 +0000] "GET /login.php HTTP/1.1" 200 1191 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:07:34 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:07:34 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:07:34 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+sh: 1: Syntax error: ";" unexpected
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:17:07:34 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1904 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:07:37 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1895 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:07:44 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:07:44 +0000] "GET /vulnerabilities/exec/index.php HTTP/1.1" 200 1801 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+ping: unknown host
+[Wed Sep 23 17:07:44.432181 2026] [:error] [pid 317] [client 172.17.0.1:53592] PHP Notice:  Undefined index: user_token in /var/www/html/vulnerabilities/exec/source/impossible.php on line 5
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "GET /login.php HTTP/1.1" 200 1191 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "GET /vulnerabilities/brute/?username=admin&password=MARKER123&Login=Login HTTP/1.1" 200 1804 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1895 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+tail: cannot open '/var/log/apache2/access.log' for reading: Permission denied
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:17:26:04 +0000] "GET /login.php HTTP/1.1" 200 1189 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:04 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:04 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:04 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1893 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+ls: cannot open directory '/var/log/apache2/': Permission denied
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:17:26:07 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1894 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:10 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1889 "-" "python-requests/2.34.2"
+
+==> /var/log/apache2/error.log <==
+tail: cannot open '/var/log/apache2/other_vhosts_access.log' for reading: Permission denied
+
+==> /var/log/apache2/access.log <==
+172.17.0.1 - - [23/Sep/2026:17:26:23 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:23 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:23 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:23 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1914 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:26 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1904 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:29 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1938 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:32 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1938 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:49 +0000] "GET /login.php HTTP/1.1" 200 1193 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:49 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:49 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:49 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1927 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:52 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1947 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:55 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1936 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:26:58 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1956 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:27:01 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 2160 "-" "python-requests/2.34.2"
+172.17.0.1 - - [23/Sep/2026:17:27:04 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1901 "-" "python-requests/2.34.2"
+172.17.0.1 - - [24/Sep/2026:02:12:42 +0000] "GET /vulnerabilities/brute/ HTTP/1.1" 302 485 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [24/Sep/2026:02:12:42 +0000] "GET /login.php HTTP/1.1" 200 1133 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [24/Sep/2026:02:12:42 +0000] "GET /dvwa/css/login.css HTTP/1.1" 200 741 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [24/Sep/2026:02:12:42 +0000] "GET /dvwa/images/login_logo.png HTTP/1.1" 200 9375 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [24/Sep/2026:02:12:45 +0000] "POST /login.php HTTP/1.1" 302 336 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [24/Sep/2026:02:12:45 +0000] "GET /index.php HTTP/1.1" 200 3036 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [24/Sep/2026:02:13:10 +0000] "GET /vulnerabilities/brute/ HTTP/1.1" 302 485 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:13:11 +0000] "GET /login.php HTTP/1.1" 200 1132 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:13:19 +0000] "POST /login.php HTTP/1.1" 302 337 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:13:20 +0000] "GET /index.php HTTP/1.1" 200 3036 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:16:12 +0000] "GET /vulnerabilities/exec/ HTTP/1.1" 200 1716 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:16:32 +0000] "GET /instructions.php HTTP/1.1" 200 5456 "http://127.0.0.1:8080/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:16:36 +0000] "GET /setup.php HTTP/1.1" 200 2306 "http://127.0.0.1:8080/instructions.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:16:36 +0000] "GET /dvwa/images/spanner.png HTTP/1.1" 200 748 "http://127.0.0.1:8080/setup.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:16:45 +0000] "GET /security.php HTTP/1.1" 200 2457 "http://127.0.0.1:8080/setup.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:16:48 +0000] "POST /security.php HTTP/1.1" 302 427 "http://127.0.0.1:8080/security.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:16:48 +0000] "GET /security.php HTTP/1.1" 200 2474 "http://127.0.0.1:8080/security.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:16:50 +0000] "GET /vulnerabilities/exec/ HTTP/1.1" 200 1717 "http://127.0.0.1:8080/security.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:16:54 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1906 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:23:36 +0000] "GET /vulnerabilities/brute/ HTTP/1.1" 200 1781 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:23:53 +0000] "GET /vulnerabilities/brute/?username=admin&password=password&Login=Login HTTP/1.1" 200 1822 "http://127.0.0.1:8080/vulnerabilities/brute/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:23:54 +0000] "GET /hackable/users/admin.jpg HTTP/1.1" 200 3829 "http://127.0.0.1:8080/vulnerabilities/brute/?username=admin&password=password&Login=Login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:28:36 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
+172.17.0.1 - - [24/Sep/2026:02:28:36 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [24/Sep/2026:02:28:36 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [24/Sep/2026:02:28:36 +0000] "GET /index.php HTTP/1.1" 200 3011 "-" "Mozilla/5.0"
+172.17.0.1 - - [24/Sep/2026:02:28:36 +0000] "GET /index.php HTTP/1.1" 200 3013 "-" "Mozilla/5.0"
+172.17.0.1 - - [24/Sep/2026:02:28:36 +0000] "GET /index.php HTTP/1.1" 200 3011 "-" "Mozilla/5.0"
+172.17.0.1 - - [24/Sep/2026:02:28:36 +0000] "GET /index.php HTTP/1.1" 200 3013 "-" "Mozilla/5.0"
+172.17.0.1 - - [24/Sep/2026:02:28:36 +0000] "GET /index.php HTTP/1.1" 200 3014 "-" "Mozilla/5.0"
+172.17.0.1 - - [24/Sep/2026:02:28:36 +0000] "GET /index.php HTTP/1.1" 200 3011 "-" "Mozilla/5.0"
+172.17.0.1 - - [24/Sep/2026:02:32:36 +0000] "GET / HTTP/1.1" 200 3013 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:32:36 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 539 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:32:42 +0000] "GET /security.php HTTP/1.1" 200 2458 "http://127.0.0.1:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:32:45 +0000] "POST /security.php HTTP/1.1" 302 424 "http://127.0.0.1:8080/security.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:32:45 +0000] "GET /security.php HTTP/1.1" 200 2471 "http://127.0.0.1:8080/security.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:32:48 +0000] "GET /vulnerabilities/exec/ HTTP/1.1" 200 1715 "http://127.0.0.1:8080/security.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [24/Sep/2026:02:33:24 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1906 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"

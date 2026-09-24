@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# Burp 项目文件（体积大，且是本机状态）
+*.burp
+burp-project/
+
+# 编辑器
+.vscode/settings.json
+
+# 临时文件
+*.tmp
