@@ -44,7 +44,7 @@ cd D:\Code\web-security-lab
      一句话把"三种类型的本质区别"写出来。
      提示词：谁（服务器 or 浏览器）把 payload 拼进了页面。 -->
 
-（待填）
+这一关跟前三关相比，最特殊的地方在于同一种类型的攻击分成了三个子类型，并且有关前后端的系统性知识涉及得更多。并且三个类型之间拼接在哪里完全不同。反射型和存储型虽然都是由服务器拼进HTML，但是前者的payload来自于攻击者的地址，后者却来自于攻击者存进数据库的内容。而DOM型的payload不是由服务器拼接，而是由浏览器的js拼接而来。
 
 ---
 
@@ -203,7 +203,7 @@ if( isset( $_POST[ 'btnSign' ] ) ) {
 |---|---|---|
 | 反射型 | echo '<pre>Hello ' . $_GET[ 'name' ] . '</pre>'; | 将输入内容拼接入代码并且没有做数据和代码的隔离 |
 | 存储型 | $name = ((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"],  $name ) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : "")); | 同上 |
-| DOM 型 | document.write("<option value='" + lang + "'>" + decodeURI(lang) + "</option>"); | （待填 ★ 判断格：`var lang = ...` 只是**取值**，不是原罪；真正把用户输入拼进 HTML 的是这一行。**为什么它是原罪？**（提示：`lang` 进 HTML 之前，做过任何编码吗？）） |
+| DOM 型 | document.write("<option value='" + lang + "'>" + decodeURI(lang) + "</option>"); | 这一句把用户输入拼进HTML，并且lang在此之前没有任何编码 |
 
 > ### 这是本模块的核心
 > 命令注入靠 **shell 的连接符**（`;` `|` `&&`）。
@@ -396,7 +396,7 @@ txtName=txtName&mtxMessage=<script>alert(1)</script>&btnSign=Sign+Guestbook
         反射型要"点攻击者给的那个链接"，存储型呢？受害者需要点任何东西吗？
 -->
 
-（待填 ★ 判断格）
+反射型需要受害者点链接。存储型却完全不需要，只要打开页面就触发了。
 
 ---
 
@@ -451,9 +451,9 @@ txtName=txtName&mtxMessage=<script>alert(1)</script>&btnSign=Sign+Guestbook
 
 | 字符 | 关掉了什么 / 开启了什么 |
 |---|---|
-| `'` | （待填 ★ 判断格） |
-| `>` | （待填 ★ 判断格） |
-| `<script>…</script>` | （待填 ★ 判断格） |
+| `'` | 关掉了value='这个引号，进入标签内部状态 |
+| `>` | 关掉了<option，回到了文本状态 |
+| `<script>…</script>` | 创建<script>元素，执行js，触发弹窗 |
 
 **第三步：★ 本模块最重要的实验 —— 服务器知道这件事吗？**
 
@@ -479,7 +479,7 @@ txtName=txtName&mtxMessage=<script>alert(1)</script>&btnSign=Sign+Guestbook
      三次返回的**字节一模一样**，页面行为却变了。
      服务器的输出没变 → 变的是浏览器里的东西 → 那只可能是谁干的？ -->
 
-（待填 ★ 判断格）
+三次返回的字节和md5一模一样，服务器输出没变，但是行为变了，因此变化来自浏览器，推断那三个<script>是浏览器的js拼接出来的
 
 > ### 这就是"DOM 型"的意义
 > **服务器返回的字节里没有 payload，漏洞却真实存在。**
@@ -496,7 +496,7 @@ txtName=txtName&mtxMessage=<script>alert(1)</script>&btnSign=Sign+Guestbook
      ③ 所以它会出现在服务器的 access.log 里吗？
 -->
 
-（待填 ★ 判断格）
+?之后的内容会发给服务器。而#表示的是fragment（片段），用来页面内定位也锚点跳转，其后的内容不发给服务器，也不进log。
 
 **原始请求 / 响应：**（`raw/dom-request.txt` / `raw/dom-response.txt`）
 
@@ -797,7 +797,7 @@ $name = htmlspecialchars( $_GET[ 'name' ] );
      再想一层：既然如此，"在入口处统一过滤一遍"为什么天生就是错的？
        （提示：站在入口的时候，你还不知道这个数据最终会去哪个位置） -->
 
-（待填 ★ 判断格）
+用户输入的文本可能走向的是不同的层次，用途也各自不同，同时还需要防止恶意攻击者的注入攻击。因此，面向不同位置的输入需要按照上下文需求进行编码，因而入口统一过滤不是一个好方法。
 
 ### 7.3 DOM 型怎么修（这次不在服务器）
 
@@ -998,4 +998,4 @@ DOM 型的特例最极端：服务器【完全不参与】，
 
 | 现象 | 原因 | 影响 |
 |---|---|---|
-| （待填） | （待填） | （待填） |
+| 刚填好的7.4和6修正自己消失了 | VS Code里的是打开时的旧内存副本，保存时覆盖了磁盘上的新内容 | 差点以为改动没生效，最后靠git的历史才查出来并修复 |
