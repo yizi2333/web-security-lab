@@ -368,8 +368,8 @@ Referer: http://127.0.0.1:18100/    ← 对 referrer 来说：跨源，所以路
      ② 这个"裁短"对"用 Referer 做 CSRF 防护"意味着什么？
 -->
 
-因为Referer只关心源，即协议加主机加端口，端口后的内容（我不知道叫什么）它不管；
-因此浏览器默认行为是Referer-Policy，即裁断端口后的内容。
+因为Referer只关心源，即协议加主机加端口，端口后的路径它不管；
+因此浏览器默认的Referrer-Policy是 strict-origin-when-cross-origin，即裁断端口后的内容。
 
 ### 4.2 ★ 为什么攻击页必须用 `127.0.0.1`，不能用 `localhost`
 
