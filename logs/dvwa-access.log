@@ -1,17 +1,3 @@
-[+] Starting mysql...
-Starting MariaDB database server: mysqld.
-[+] Starting apache
-AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
-Starting Apache httpd web server: apache2.
-==> /var/log/apache2/access.log <==
-
-==> /var/log/apache2/error.log <==
-[Wed Sep 23 03:10:47.878200 2026] [mpm_prefork:notice] [pid 286] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
-[Wed Sep 23 03:10:47.878303 2026] [core:notice] [pid 286] AH00094: Command line: '/usr/sbin/apache2'
-
-==> /var/log/apache2/other_vhosts_access.log <==
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:03:13:14 +0000] "GET / HTTP/1.1" 302 479 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
 172.17.0.1 - - [23/Sep/2026:03:13:19 +0000] "GET / HTTP/1.1" 302 479 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:03:13:26 +0000] "GET /login.php HTTP/1.1" 200 1191 "-" "python-requests/2.34.2"
@@ -39,11 +25,6 @@ Starting Apache httpd web server: apache2.
 172.17.0.1 - - [23/Sep/2026:03:18:39 +0000] "GET /setup.php HTTP/1.1" 200 2036 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
 172.17.0.1 - - [23/Sep/2026:03:19:02 +0000] "POST /setup.php HTTP/1.1" 302 338 "http://127.0.0.1:8080/setup.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
 172.17.0.1 - - [23/Sep/2026:03:19:02 +0000] "GET /setup.php HTTP/1.1" 200 2170 "http://127.0.0.1:8080/setup.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
-
-==> /var/log/apache2/error.log <==
-[Wed Sep 23 03:19:02.499102 2026] [:error] [pid 302] [client 172.17.0.1:51140] PHP Notice:  Constant DVWA_WEB_PAGE_TO_ROOT already defined in /var/www/html/dvwa/includes/DBMS/MySQL.php on line 9, referer: http://127.0.0.1:8080/setup.php
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:03:19:07 +0000] "GET /login.php HTTP/1.1" 200 1050 "http://127.0.0.1:8080/setup.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
 172.17.0.1 - - [23/Sep/2026:03:19:39 +0000] "POST /login.php HTTP/1.1" 302 337 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
 172.17.0.1 - - [23/Sep/2026:03:19:39 +0000] "GET /index.php HTTP/1.1" 200 3036 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
@@ -271,46 +252,15 @@ Starting Apache httpd web server: apache2.
 172.17.0.1 - - [23/Sep/2026:16:14:15 +0000] "GET /vulnerabilities/view_source.php?id=exec&security=impossible HTTP/1.1" 200 1797 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:16:21 +0000] "GET /vulnerabilities/exec/ HTTP/1.1" 200 1716 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
 172.17.0.1 - - [23/Sep/2026:16:16:38 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1923 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:16:41 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1926 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:18:51 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1897 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
 172.17.0.1 - - [23/Sep/2026:16:19:06 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1896 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
 172.17.0.1 - - [23/Sep/2026:16:19:43 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1728 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
 172.17.0.1 - - [23/Sep/2026:16:20:08 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1905 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
 172.17.0.1 - - [23/Sep/2026:16:20:29 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1893 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:21:05 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1722 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:21:07 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
-
-==> /var/log/apache2/error.log <==
-ping: missing host operand
-Try 'ping --help' or 'ping --usage' for more information.
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:21:08 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:21:27 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1901 "http://127.0.0.1:8080/vulnerabilities/exec/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
 172.17.0.1 - - [23/Sep/2026:16:21:51 +0000] "GET /login.php HTTP/1.1" 200 1193 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:21:51 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
@@ -323,12 +273,6 @@ ping: unknown host
 172.17.0.1 - - [23/Sep/2026:16:22:17 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1904 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:22:20 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:22:20 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:22:37 +0000] "GET /login.php HTTP/1.1" 200 1193 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:22:37 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:22:37 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
@@ -336,35 +280,15 @@ ping: unknown host
 172.17.0.1 - - [23/Sep/2026:16:22:40 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1897 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:22:46 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1896 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:22:52 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:22:56 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1733 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:23:00 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1901 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:23:03 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1899 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:23:06 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1897 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:23:32 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:23:32 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:23:32 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:23:32 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1895 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:23:39 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1897 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:16:23:46 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1729 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:23:49 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1904 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:16:23:52 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1916 "-" "python-requests/2.34.2"
@@ -383,47 +307,21 @@ ping: unknown host
 172.17.0.1 - - [23/Sep/2026:17:07:34 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:07:34 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:07:34 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1721 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-sh: 1: Syntax error: ";" unexpected
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:17:07:34 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1904 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:07:37 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1895 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:07:44 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:07:44 +0000] "GET /vulnerabilities/exec/index.php HTTP/1.1" 200 1801 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-[Wed Sep 23 17:07:44.432181 2026] [:error] [pid 317] [client 172.17.0.1:53592] PHP Notice:  Undefined index: user_token in /var/www/html/vulnerabilities/exec/source/impossible.php on line 5
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "GET /login.php HTTP/1.1" 200 1191 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "GET /vulnerabilities/brute/?username=admin&password=MARKER123&Login=Login HTTP/1.1" 200 1804 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:25:53 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1895 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-tail: cannot open '/var/log/apache2/access.log' for reading: Permission denied
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:17:26:04 +0000] "GET /login.php HTTP/1.1" 200 1189 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:26:04 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:26:04 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:26:04 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1893 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-ls: cannot open directory '/var/log/apache2/': Permission denied
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:17:26:07 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1894 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:26:10 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1889 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-tail: cannot open '/var/log/apache2/other_vhosts_access.log' for reading: Permission denied
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [23/Sep/2026:17:26:23 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:26:23 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
 172.17.0.1 - - [23/Sep/2026:17:26:23 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
@@ -632,45 +530,6 @@ tail: cannot open '/var/log/apache2/other_vhosts_access.log' for reading: Permis
 172.17.0.1 - - [24/Sep/2026:17:11:07 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
 172.17.0.1 - - [24/Sep/2026:17:11:07 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
 172.17.0.1 - - [24/Sep/2026:17:11:07 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1977 "-" "python-requests/2.34.2"
-[+] Starting mysql...
-Starting MariaDB database server: mysqld.
-[+] Starting apache
-AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
-Starting Apache httpd web server: apache2httpd (pid 286) already running
- failed!
-The apache2 instance did not start within 20 seconds. Please read the log files to discover problems ... (warning).
-==> /var/log/apache2/access.log <==
-172.17.0.1 - - [24/Sep/2026:17:10:49 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
-172.17.0.1 - - [24/Sep/2026:17:10:49 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 3309 "-" "python-requests/2.34.2"
-172.17.0.1 - - [24/Sep/2026:17:10:57 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
-172.17.0.1 - - [24/Sep/2026:17:10:57 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
-172.17.0.1 - - [24/Sep/2026:17:10:57 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
-172.17.0.1 - - [24/Sep/2026:17:10:58 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 3309 "-" "python-requests/2.34.2"
-172.17.0.1 - - [24/Sep/2026:17:11:07 +0000] "GET /login.php HTTP/1.1" 200 1190 "-" "python-requests/2.34.2"
-172.17.0.1 - - [24/Sep/2026:17:11:07 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
-172.17.0.1 - - [24/Sep/2026:17:11:07 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
-172.17.0.1 - - [24/Sep/2026:17:11:07 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1977 "-" "python-requests/2.34.2"
-
-==> /var/log/apache2/error.log <==
-ping: unknown host
-ping: unknown host
-ping: unknown host
-ping: unknown host
-sh: 1: Syntax error: ";" unexpected
-ping: unknown host
-[Wed Sep 23 17:07:44.432181 2026] [:error] [pid 317] [client 172.17.0.1:53592] PHP Notice:  Undefined index: user_token in /var/www/html/vulnerabilities/exec/source/impossible.php on line 5
-tail: cannot open '/var/log/apache2/access.log' for reading: Permission denied
-ls: cannot open directory '/var/log/apache2/': Permission denied
-tail: cannot open '/var/log/apache2/other_vhosts_access.log' for reading: Permission denied
-
-==> /var/log/apache2/other_vhosts_access.log <==
-
-==> /var/log/apache2/error.log <==
-[Sat Sep 26 03:35:32.279342 2026] [core:warn] [pid 412] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
-[Sat Sep 26 03:35:32.283230 2026] [mpm_prefork:notice] [pid 412] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
-[Sat Sep 26 03:35:32.283258 2026] [core:notice] [pid 412] AH00094: Command line: '/usr/sbin/apache2'
-
-==> /var/log/apache2/access.log <==
 172.17.0.1 - - [26/Sep/2026:03:35:43 +0000] "GET /login.php HTTP/1.1" 200 1937 "-" "curl/8.21.0"
 172.17.0.1 - - [26/Sep/2026:03:35:43 +0000] "HEAD /login.php HTTP/1.1" 200 369 "-" "curl/8.21.0"
 172.17.0.1 - - [26/Sep/2026:03:35:43 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "curl/8.21.0"
@@ -698,3 +557,230 @@ tail: cannot open '/var/log/apache2/other_vhosts_access.log' for reading: Permis
 172.17.0.1 - - [26/Sep/2026:04:16:17 +0000] "GET /vulnerabilities/sqli/?id=1%27+UNION+SELECT+user%2C+password+FROM+users%E2%80%99%EF%BC%9B&Submit=Submit HTTP/1.1" 200 503 "http://127.0.0.1:8080/vulnerabilities/sqli/?id=1%27or%271%27%3D%271&Submit=Submit" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
 172.17.0.1 - - [26/Sep/2026:04:16:25 +0000] "GET /vulnerabilities/sqli/?id=1%27+UNION+SELECT+user%2C+password+FROM+users%27%3B&Submit=Submit HTTP/1.1" 200 505 "http://127.0.0.1:8080/vulnerabilities/sqli/?id=1%27or%271%27%3D%271&Submit=Submit" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
 172.17.0.1 - - [26/Sep/2026:04:17:00 +0000] "GET /vulnerabilities/sqli/?id=1%27+UNION+SELECT+user%2C+password+FROM+users+%23+%27%3B&Submit=Submit HTTP/1.1" 200 1989 "http://127.0.0.1:8080/vulnerabilities/sqli/?id=1%27or%271%27%3D%271&Submit=Submit" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:12:12:36 +0000] "GET /vulnerabilities/view_source.php?id=sqli&security=impossible HTTP/1.1" 200 1678 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:12:17:42 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:12:17:42 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:12:17:42 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:12:17:42 +0000] "GET /vulnerabilities/view_source.php?id=sqli&security=impossible HTTP/1.1" 200 1677 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:14:46:39 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:14:46:39 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:14:46:39 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:14:46:39 +0000] "GET /vulnerabilities/xss_r/ HTTP/1.1" 200 1752 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:14:46:40 +0000] "GET /vulnerabilities/xss_s/ HTTP/1.1" 200 1975 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:14:46:40 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 200 1906 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:05:05 +0000] "GET /vulnerabilities/xss_r/?name=hello HTTP/1.1" 200 1764 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:30:07 +0000] "GET /vulnerabilities/xss_r/?name=%3Cscript%3Ealert%281%29%3C%2Fscript%3E HTTP/1.1" 200 1773 "http://127.0.0.1:8080/vulnerabilities/xss_r/?name=hello" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:30:31 +0000] "GET /vulnerabilities/view_source.php?id=xss_r&security=low HTTP/1.1" 200 1257 "http://127.0.0.1:8080/vulnerabilities/xss_r/?name=%3Cscript%3Ealert%281%29%3C%2Fscript%3E" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:30:54 +0000] "GET /login.php HTTP/1.1" 200 1191 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:30:54 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:30:54 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:30:54 +0000] "GET /vulnerabilities/xss_r/?name=%3Cscript%3Ealert%281%29%3C%2Fscript%3E HTTP/1.1" 200 1772 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:36:02 +0000] "GET /vulnerabilities/xss_s/ HTTP/1.1" 200 1976 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:36:17 +0000] "GET /vulnerabilities/view_source.php?id=xss_s&security=low HTTP/1.1" 200 1646 "http://127.0.0.1:8080/vulnerabilities/xss_s/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:38:52 +0000] "POST /vulnerabilities/xss_s/ HTTP/1.1" 200 1988 "http://127.0.0.1:8080/vulnerabilities/xss_s/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:43:43 +0000] "GET /login.php HTTP/1.1" 200 1189 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:43:43 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:43:43 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:43:43 +0000] "POST /vulnerabilities/xss_s/ HTTP/1.1" 200 2004 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:43:43 +0000] "GET /vulnerabilities/xss_s/ HTTP/1.1" 200 2004 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:47:24 +0000] "POST /vulnerabilities/xss_s/ HTTP/1.1" 200 2009 "http://127.0.0.1:8080/vulnerabilities/xss_s/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:49:14 +0000] "POST /vulnerabilities/xss_s/ HTTP/1.1" 200 2014 "http://127.0.0.1:8080/vulnerabilities/xss_s/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:49:44 +0000] "GET /vulnerabilities/xss_s/ HTTP/1.1" 302 485 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:44 +0000] "GET /login.php HTTP/1.1" 200 1134 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:44 +0000] "GET /dvwa/images/login_logo.png HTTP/1.1" 200 9375 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:44 +0000] "GET /dvwa/css/login.css HTTP/1.1" 200 741 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:46 +0000] "POST /login.php HTTP/1.1" 302 336 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:46 +0000] "GET /index.php HTTP/1.1" 200 3036 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:46 +0000] "GET /dvwa/css/main.css HTTP/1.1" 200 1445 "http://127.0.0.1:8080/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:46 +0000] "GET /dvwa/js/dvwaPage.js HTTP/1.1" 200 815 "http://127.0.0.1:8080/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:46 +0000] "GET /dvwa/images/logo.png HTTP/1.1" 200 5331 "http://127.0.0.1:8080/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:46 +0000] "GET /dvwa/js/add_event_listeners.js HTTP/1.1" 200 626 "http://127.0.0.1:8080/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:49:51 +0000] "GET /vulnerabilities/xss_s/ HTTP/1.1" 200 2013 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+172.17.0.1 - - [26/Sep/2026:15:54:42 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=low HTTP/1.1" 200 1052 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:55:03 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 200 1907 "http://127.0.0.1:8080/vulnerabilities/sqli/?id=1%27+UNION+SELECT+user%2C+password+FROM+users+%23+%27%3B&Submit=Submit" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:55:06 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=low HTTP/1.1" 200 1051 "http://127.0.0.1:8080/vulnerabilities/xss_d/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:55:08 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=low HTTP/1.1" 200 1051 "http://127.0.0.1:8080/vulnerabilities/xss_d/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:55:40 +0000] "GET /login.php HTTP/1.1" 200 1190 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:55:40 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:55:40 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:55:40 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 200 1906 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:15:56:37 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 200 1907 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:15:59:09 +0000] "GET /vulnerabilities/xss_d/?default=English HTTP/1.1" 200 1907 "http://127.0.0.1:8080/vulnerabilities/xss_d/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:16:01:22 +0000] "GET /vulnerabilities/xss_d/?default=<script>alert(1)</script> HTTP/1.1" 200 1907 "http://127.0.0.1:8080/vulnerabilities/xss_d/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:16:01:27 +0000] "GET /vulnerabilities/xss_d/?default=English HTTP/1.1" 200 1907 "http://127.0.0.1:8080/vulnerabilities/xss_d/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:16:01:30 +0000] "GET /vulnerabilities/xss_d/?default=English HTTP/1.1" 200 1906 "http://127.0.0.1:8080/vulnerabilities/xss_d/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:16:02:06 +0000] "GET /vulnerabilities/xss_d/?default=English HTTP/1.1" 200 1907 "http://127.0.0.1:8080/vulnerabilities/xss_d/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:16:05:29 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:16:05:29 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:16:05:29 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:16:05:29 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 200 1906 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:16:05:29 +0000] "GET /vulnerabilities/xss_d/?default=English HTTP/1.1" 200 1906 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:16:05:29 +0000] "GET /vulnerabilities/xss_d/?default=%3Cscript%3Ealert%281%29%3C%2Fscript%3E HTTP/1.1" 200 1906 "-" "python-requests/2.34.2"
+172.17.0.1 - - [26/Sep/2026:16:09:45 +0000] "GET /vulnerabilities/xss_d/?default=English HTTP/1.1" 200 1907 "http://127.0.0.1:8080/vulnerabilities/xss_d/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:16:09:49 +0000] "GET /vulnerabilities/xss_d/?default=%27%3E%3Cscript%3Ealert(1)%3C/script%3E HTTP/1.1" 200 1906 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:16:12:55 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 200 1907 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [26/Sep/2026:16:13:19 +0000] "GET /vulnerabilities/xss_d/?default=%3Cscript%3Ealert(1)%3C/script%3E HTTP/1.1" 200 1907 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:06:35:48 +0000] "GET / HTTP/1.1" 302 479 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [27/Sep/2026:06:35:48 +0000] "GET /login.php HTTP/1.1" 200 1795 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [27/Sep/2026:11:00:41 +0000] "GET /vulnerabilities/view_source.php?id=xss_r&security=low HTTP/1.1" 200 1257 "http://127.0.0.1:8080/vulnerabilities/xss_r/?name=%3Cscript%3Ealert%281%29%3C%2Fscript%3E" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:01:01 +0000] "GET /vulnerabilities/view_source.php?id=xss_s&security=low HTTP/1.1" 200 1646 "http://127.0.0.1:8080/vulnerabilities/xss_s/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:01:22 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=low HTTP/1.1" 200 1052 "http://127.0.0.1:8080/vulnerabilities/xss_d/?default=%3Cscript%3Ealert(1)%3C/script%3E" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:08:41 +0000] "GET /vulnerabilities/xss_r/?name=hello HTTP/1.1" 200 1764 "http://127.0.0.1:8080/vulnerabilities/xss_r/?name=%3Cscript%3Ealert%281%29%3C%2Fscript%3E" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:14 +0000] "GET /login.php HTTP/1.1" 200 1192 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:14 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:14 +0000] "GET /login.php HTTP/1.1" 200 1076 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:14 +0000] "GET /vulnerabilities/xss_r/?name=%3Cscript%3Ealert%281%29%3C%2Fscript%3E HTTP/1.1" 302 342 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:14 +0000] "GET /login.php HTTP/1.1" 200 1049 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:21 +0000] "GET /login.php HTTP/1.1" 200 1191 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:21 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:21 +0000] "GET /index.php HTTP/1.1" 200 3036 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:21 +0000] "GET /vulnerabilities/xss_r/?name=%3Cscript%3Ealert%281%29%3C%2Fscript%3E HTTP/1.1" 200 1772 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:29 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:29 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:29 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:13:29 +0000] "GET /vulnerabilities/xss_r/?name=%3Cscript%3Ealert%281%29%3C%2Fscript%3E HTTP/1.1" 200 4728 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:21:11 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:21:11 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:21:11 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:21:11 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=low HTTP/1.1" 200 1657 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:21:16 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:21:16 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:21:16 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:21:16 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 200 5135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:21:32 +0000] "GET /vulnerabilities/xss_d/?default=%27%3E%3Cscript%3Edocument.title%2B%3D%27X%27%3C%2Fscript%3E HTTP/1.1" 302 485 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.130 Electron/44.4.2 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:21:32 +0000] "GET /login.php HTTP/1.1" 200 1130 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.130 Electron/44.4.2 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:21:32 +0000] "GET /dvwa/css/login.css HTTP/1.1" 200 741 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.130 Electron/44.4.2 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:21:32 +0000] "GET /dvwa/images/login_logo.png HTTP/1.1" 200 9375 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.130 Electron/44.4.2 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:21:33 +0000] "POST /login.php HTTP/1.1" 200 1048 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.130 Electron/44.4.2 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:21:34 +0000] "GET /vulnerabilities/xss_d/?default=%27%3E%3Cscript%3Edocument.title%2B%3D%27X%27%3C%2Fscript%3E HTTP/1.1" 302 342 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.130 Electron/44.4.2 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:21:34 +0000] "GET /login.php HTTP/1.1" 200 1049 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.130 Electron/44.4.2 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:24:53 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:24:53 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:24:53 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:24:53 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=low HTTP/1.1" 200 1657 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:24:53 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=medium HTTP/1.1" 200 3487 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:24:53 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=high HTTP/1.1" 200 3942 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:24:53 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=impossible HTTP/1.1" 200 1733 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:25:03 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:25:03 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:25:03 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:25:03 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=low HTTP/1.1" 200 1657 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:25:03 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=medium HTTP/1.1" 200 3487 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:25:03 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=high HTTP/1.1" 200 3942 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:25:03 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=impossible HTTP/1.1" 200 1733 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:26:39 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 200 1907 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:26:41 +0000] "GET /vulnerabilities/xss_d/?default=English HTTP/1.1" 200 1906 "http://127.0.0.1:8080/vulnerabilities/xss_d/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:40:01 +0000] "GET /vulnerabilities/view_source.php?id=xss_s&security=low HTTP/1.1" 200 1646 "http://127.0.0.1:8080/vulnerabilities/xss_s/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:55:37 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:55:37 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:55:37 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:55:37 +0000] "GET /vulnerabilities/xss_d/?default=English HTTP/1.1" 200 5135 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:55:37 +0000] "GET /vulnerabilities/xss_d/?default=%27%3E%3Cscript%3Ealert%281%29%3C%2Fscript%3E HTTP/1.1" 200 5135 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:55:37 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 200 5135 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "GET /vulnerabilities/view_source.php?id=xss_r&security=impossible HTTP/1.1" 200 4096 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "GET /vulnerabilities/view_source.php?id=xss_s&security=impossible HTTP/1.1" 200 9975 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "GET /vulnerabilities/view_source.php?id=xss_d&security=impossible HTTP/1.1" 200 1733 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "POST /vulnerabilities/xss_s/ HTTP/1.1" 200 5752 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:56:32 +0000] "GET /vulnerabilities/xss_s/ HTTP/1.1" 200 5752 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:58:27 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:58:27 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:58:27 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:58:27 +0000] "GET /vulnerabilities/xss_s/ HTTP/1.1" 200 5752 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:11:58:48 +0000] "POST /vulnerabilities/xss_s/ HTTP/1.1" 200 2019 "http://127.0.0.1:8080/vulnerabilities/xss_s/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:11:58:59 +0000] "POST /vulnerabilities/xss_s/ HTTP/1.1" 200 2019 "http://127.0.0.1:8080/vulnerabilities/xss_s/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:12:00:24 +0000] "POST /vulnerabilities/xss_s/ HTTP/1.1" 200 2023 "http://127.0.0.1:8080/vulnerabilities/xss_s/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [27/Sep/2026:12:07:40 +0000] "GET /vulnerabilities/xss_d/source/low.php HTTP/1.1" 200 203 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [27/Sep/2026:12:07:40 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 302 429 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [27/Sep/2026:12:07:40 +0000] "GET /login.php HTTP/1.1" 200 1879 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [27/Sep/2026:12:07:40 +0000] "GET /vulnerabilities/xss_d/ HTTP/1.1" 302 429 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [27/Sep/2026:12:07:40 +0000] "GET /login.php HTTP/1.1" 200 1879 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [27/Sep/2026:13:45:56 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:13:45:56 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:13:45:56 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:13:45:56 +0000] "GET /vulnerabilities/xss_r/?name=%3Cimg+src%3Dx+onerror%3Dalert%281%29%3E HTTP/1.1" 200 4731 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:13:45:56 +0000] "GET /vulnerabilities/xss_r/?name=%3Csvg+onload%3Dalert%281%29%3E HTTP/1.1" 200 4724 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:13:45:56 +0000] "GET /vulnerabilities/xss_r/?name=%3CScRiPt%3Ealert%281%29%3C%2FScRiPt%3E HTTP/1.1" 200 4728 "-" "python-requests/2.34.2"
+172.17.0.1 - - [27/Sep/2026:13:45:56 +0000] "GET /vulnerabilities/xss_r/?name=%3Cscr%3Cscript%3Eipt%3Ealert%281%29%3C%2Fscript%3E HTTP/1.1" 200 4736 "-" "python-requests/2.34.2"
+172.17.0.1 - - [28/Sep/2026:10:32:49 +0000] "GET / HTTP/1.1" 302 479 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [28/Sep/2026:10:32:49 +0000] "GET /login.php HTTP/1.1" 200 1795 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [28/Sep/2026:10:32:51 +0000] "GET /vulnerabilities/csrf/ HTTP/1.1" 302 429 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [28/Sep/2026:10:32:51 +0000] "GET /login.php HTTP/1.1" 200 1879 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [28/Sep/2026:10:33:38 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [28/Sep/2026:10:33:38 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [28/Sep/2026:10:33:38 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [28/Sep/2026:10:33:38 +0000] "GET /vulnerabilities/csrf/ HTTP/1.1" 200 4596 "-" "python-requests/2.34.2"
+172.17.0.1 - - [28/Sep/2026:10:45:47 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [28/Sep/2026:10:45:48 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [28/Sep/2026:10:45:55 +0000] "GET /vulnerabilities/csrf/ HTTP/1.1" 302 485 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.130 Electron/44.4.2 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:10:45:55 +0000] "GET /login.php HTTP/1.1" 200 1133 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.130 Electron/44.4.2 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:10:20 +0000] "GET / HTTP/1.1" 302 479 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+172.17.0.1 - - [28/Sep/2026:11:10:20 +0000] "GET /login.php HTTP/1.1" 200 1050 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+172.17.0.1 - - [28/Sep/2026:11:10:20 +0000] "GET /dvwa/css/login.css HTTP/1.1" 200 741 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+172.17.0.1 - - [28/Sep/2026:11:10:20 +0000] "GET /dvwa/images/login_logo.png HTTP/1.1" 200 9375 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+172.17.0.1 - - [28/Sep/2026:11:43:24 +0000] "GET /vulnerabilities/csrf/ HTTP/1.1" 200 1752 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:43:43 +0000] "GET /vulnerabilities/csrf/?password_new=114514&password_conf=114514&Change=Change HTTP/1.1" 200 1764 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:48:53 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:48:53 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:48:53 +0000] "GET /login.php HTTP/1.1" 200 1889 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:48:53 +0000] "GET /index.php HTTP/1.1" 302 336 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:48:53 +0000] "GET /login.php HTTP/1.1" 200 1850 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:55:01 +0000] "GET /vulnerabilities/csrf/?password_new=114514&password_conf=114515&Change=Change HTTP/1.1" 200 1772 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:56:31 +0000] "GET /vulnerabilities/csrf/?password_new=114514&password_conf=114515&Change=Change HTTP/1.1" 400 0 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:11:58:05 +0000] "GET /vulnerabilities/csrf/?password_new=114514&password_conf=114515&Change=Change HTTP/1.1" 408 0 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:12:04:41 +0000] "GET /vulnerabilities/csrf/?password_new=114514&password_conf=114514&Change=Change HTTP/1.1" 200 1764 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:12:21:07 +0000] "GET /vulnerabilities/csrf/?password_new=114514&password_conf=114514&Change=Change HTTP/1.1" 200 1764 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:12:23:56 +0000] "GET /vulnerabilities/csrf/?password_new=114514&password_conf=114514&Change=Change HTTP/1.1" 302 485 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:12:24:19 +0000] "GET /vulnerabilities/csrf/?password_new=114514&password_conf=114514&Change=Change HTTP/1.1" 302 485 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:12:25:19 +0000] "GET /vulnerabilities/csrf/?password_new=aaa&password_conf=bbb&Change=Change HTTP/1.1" 302 485 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [28/Sep/2026:12:27:31 +0000] "GET /vulnerabilities/csrf/?password_new=aaa&password_conf=aaa&Change=Change HTTP/1.1" 200 1764 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:06:42:58 +0000] "GET /setup.php HTTP/1.1" 200 2136 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:06:42:58 +0000] "GET /login.php HTTP/1.1" 200 1191 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:06:42:58 +0000] "GET /setup.php HTTP/1.1" 200 2137 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:06:43:03 +0000] "GET /setup.php HTTP/1.1" 200 2136 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:06:43:43 +0000] "GET /setup.php HTTP/1.1" 200 2309 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:06:43:53 +0000] "POST /setup.php HTTP/1.1" 302 338 "http://127.0.0.1:8080/setup.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:06:43:53 +0000] "GET /setup.php HTTP/1.1" 200 2414 "http://127.0.0.1:8080/setup.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:06:44:07 +0000] "GET /login.php HTTP/1.1" 200 1050 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:06:44:14 +0000] "POST /login.php HTTP/1.1" 302 337 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:06:44:15 +0000] "GET /login.php HTTP/1.1" 200 1066 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:06:44:23 +0000] "POST /login.php HTTP/1.1" 302 337 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:06:44:23 +0000] "GET /index.php HTTP/1.1" 200 3036 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:06:44:36 +0000] "GET /vulnerabilities/csrf/ HTTP/1.1" 200 1752 "http://127.0.0.1:8080/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:17:33 +0000] "GET /vulnerabilities/csrf/?password_new=hacked&password_conf=hacked&Change=Change HTTP/1.1" 200 1764 "http://127.0.0.1:18100/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:17:46 +0000] "GET /logout.php HTTP/1.1" 302 337 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:17:46 +0000] "GET /login.php HTTP/1.1" 200 1074 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:17:55 +0000] "POST /login.php HTTP/1.1" 302 337 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:17:56 +0000] "GET /login.php HTTP/1.1" 200 1066 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:18:09 +0000] "POST /login.php HTTP/1.1" 302 337 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:18:09 +0000] "GET /index.php HTTP/1.1" 200 3036 "http://127.0.0.1:8080/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:18:37 +0000] "GET / HTTP/1.1" 302 479 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [29/Sep/2026:07:18:37 +0000] "GET /login.php HTTP/1.1" 200 1795 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"
+172.17.0.1 - - [29/Sep/2026:07:39:31 +0000] "GET /vulnerabilities/csrf/ HTTP/1.1" 200 1752 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:39:40 +0000] "GET /vulnerabilities/csrf/?password_new=aaaaaa&password_conf=aaaaaa&Change=Change HTTP/1.1" 200 1764 "http://127.0.0.1:8080/vulnerabilities/csrf/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:42:02 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:02 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:02 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:02 +0000] "GET /index.php HTTP/1.1" 200 7048 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:02 +0000] "GET /vulnerabilities/view_source.php?id=csrf&security=low HTTP/1.1" 200 8799 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:09 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:09 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:09 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:09 +0000] "GET /vulnerabilities/view_source.php?id=csrf&security=medium HTTP/1.1" 200 10535 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:09 +0000] "GET /vulnerabilities/view_source.php?id=csrf&security=high HTTP/1.1" 200 9693 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:09 +0000] "GET /vulnerabilities/view_source.php?id=csrf&security=impossible HTTP/1.1" 200 13985 "-" "python-requests/2.34.2"
+172.17.0.1 - - [29/Sep/2026:07:42:25 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:42:25 +0000] "POST /login.php HTTP/1.1" 302 336 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:42:25 +0000] "GET /index.php HTTP/1.1" 200 7135 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:42:25 +0000] "GET /vulnerabilities/csrf/?password_new=aaa&password_conf=bbb&Change=Change HTTP/1.1" 200 4640 "http://127.0.0.1:18100/x.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:42:25 +0000] "GET /vulnerabilities/csrf/?password_new=aaa&password_conf=bbb&Change=Change HTTP/1.1" 200 4649 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:42:25 +0000] "GET /vulnerabilities/csrf/?password_new=aaa&password_conf=bbb&Change=Change HTTP/1.1" 200 4649 "http://evil.example/attack.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:42:25 +0000] "GET /vulnerabilities/csrf/?password_new=aaa&password_conf=bbb&Change=Change HTTP/1.1" 200 4640 "http://127.0.0.1:18100/csrf_attack.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:42:25 +0000] "GET /vulnerabilities/csrf/?password_new=aaa&password_conf=bbb&Change=Change HTTP/1.1" 200 4640 "http://127.0.0.1.evil.example/a.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [29/Sep/2026:07:42:25 +0000] "GET /vulnerabilities/csrf/?password_new=aaa&password_conf=bbb&Change=Change HTTP/1.1" 200 4631 "http://evil.example/attack.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [30/Sep/2026:14:51:32 +0000] "GET /login.php HTTP/1.1" 200 1993 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.9444"

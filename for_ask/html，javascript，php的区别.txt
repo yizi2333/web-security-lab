@@ -3,7 +3,7 @@
 > **用法**：卡住就记一行；问到答案，就把结论补在那个问题底下。
 > 这样它会长成我自己的速查手册 —— 比抄来的教程贴身得多。
 >
-> 目前 5 个问题，全部已答。
+> 目前 **7 个问题**，全部已答。
 
 ---
 
@@ -290,3 +290,115 @@ DVWA Low 档**其实调用了** `mysqli_real_escape_string()` —— 容易让�
 > 真实世界里 cookie 泄漏的渠道不止 XSS：网络嗅探（明文 HTTP → 所以有 `Secure`）、
 > 恶意浏览器扩展、日志泄漏、物理接触……
 > **所以服务端还有一招：把会话和 IP / UA 绑定** —— 泄漏了也不好用（代价是可能误伤正常用户）。
+## 6. `[::1]` 具体是什么域名
+
+**短答：它不是域名，是一个 IP 地址字面量 —— IPv6 的环回地址（loopback），等价于 IPv4 的 `127.0.0.1`。**
+
+### 拆开看
+
+```text
+[::1]
+ │└┬┘
+ │ └── ::1  = IPv6 环回地址
+ └──── 方括号：URL 语法要求
+```
+
+### 方括号是干什么用的
+
+**因为 IPv6 地址本身含冒号，而 URL 里的冒号已经用来分隔"主机"和"端口"了：**
+
+```text
+http://[::1]:18100/csrf_attack.html
+        └─┬─┘ └─┬┘
+        IPv6   端口
+        ↑ 不包方括号的话，浏览器分不清哪个冒号是端口分隔符
+```
+
+**规则：URL 里出现 IPv6 地址，必须用方括号包起来。**
+（IPv4 不用，因为它里面没有冒号：`http://127.0.0.1:18100/`）
+
+### 三个名字的对照
+
+| 写法 | 是什么 | 指向 |
+|---|---|---|
+| `127.0.0.1` | **IPv4 地址** | 本机 |
+| `[::1]` | **IPv6 地址** | 本机（同一个环回口） |
+| `localhost` | **主机名**（不是 IP） | 通常解析到 `::1` 和 `127.0.0.1` |
+
+> ★ **三个都指向同一台机器，但对浏览器来说是三个不同的 host。**
+
+### 为什么它在 CSRF 那一关很重要
+
+**因为它能造出"跨站"：**
+
+```text
+http://[::1]:18100/  打  http://127.0.0.1:18101/
+        ↑                        ↑
+    发起方 host              目标 host
+    → 两个不同的 host → 两个不同的【站】→ 【跨站】
+    → SameSite=Lax 拦掉子资源请求的 cookie
+```
+
+**而 `127.0.0.1:18100` 打 `127.0.0.1:8080` 是【同站】**（只是跨源）→ cookie 照带。
+
+> **那次实验就是故意用 `[::1]` 造"跨站"这个条件的** ——
+> 用 `127.0.0.1` 换个端口只能造"跨源"，造不出"跨站"。
+
+**实测（探针的原始输出）：**
+
+```text
+从 [::1]:18100 加载     → Sec-Fetch-Site: cross-site  → Cookie=(没有 Cookie)
+从 127.0.0.1:18100 加载 → Sec-Fetch-Site: same-site  → Cookie=PHPSESSID=...; probe=1
+```
+
+---
+
+## 7. 我用的 Edge 浏览器也是谷歌内核吗
+
+**是的 —— 从 2020 年 1 月起（Edge 79），Edge 换成了 Chromium 内核。**
+
+### 先分清四个名字
+
+| 名字 | 是什么 |
+|---|---|
+| **Chromium** | **开源项目**，Google 主导；提供渲染引擎 + JS 引擎 |
+| **Chrome** | Google 在 Chromium 之上**加了自己的东西**（账号同步、Google 服务） |
+| **Edge** | 微软在 Chromium 之上**加了微软的东西**（微软账号、Bing、Copilot） |
+| **Edge Legacy**（2020 前） | ❌ 那是微软自己的 **EdgeHTML** 内核，**不是** Chromium |
+
+**所以 Chrome 和 Edge 共用：**
+
+- 渲染引擎 **Blink**
+- JS 引擎 **V8**
+- DevTools（基本一样）
+- ★ 那一套安全机制：`SameSite` 默认值、`Sec-Fetch-*` 头、`Referrer-Policy` 默认值
+
+### ★ 对我的实际影响（3 条）
+
+1. **我做的所有实测结论，对 Edge 一样成立** ——
+   `SameSite=Lax` 默认、`Sec-Fetch-Site`、`Referrer-Policy: strict-origin-when-cross-origin`
+   都是 **Chromium 的行为**，不是"Chrome 专有"。
+2. **版本号不同** —— 新特性可能先后差几个月。
+3. **cookie 库位置不同，但结构一模一样（实测）：**
+
+```text
+Chrome: C:\Users\yihai\AppData\Local\Google\Chrome\User Data\Default\Network\Cookies
+Edge  : C:\Users\yihai\AppData\Local\Microsoft\Edge\User Data\Default\Network\Cookies
+                                                        └──── 结构完全同构 ────┘
+```
+
+**同一套 profile 目录布局、同一个 SQLite 文件名** —— 这就是"同内核"的物证。
+
+### 其他同类 / 异类
+
+| 浏览器 | 内核 |
+|---|---|
+| Chrome / Edge / Brave / Opera / Vivaldi / 360极速 / QQ（部分） | **Chromium（Blink + V8）** |
+| **Firefox** | **Gecko**（自己的） |
+| **Safari** | **WebKit**（自己的） |
+
+> ### ★ 这对做 Web 安全很实际
+> **"浏览器默认行为"要按【内核家族】来问，而不是按品牌。**
+> 以后你写 payload 或做防御，要问的是"**这个内核**怎么处理"，
+> 而不是"Chrome 怎么处理"。**（Chrome 的结论对 Edge 成立，对 Firefox 不一定。）**
+
