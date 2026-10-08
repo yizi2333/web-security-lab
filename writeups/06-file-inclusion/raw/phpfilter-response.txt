@@ -1,0 +1,95 @@
+HTTP/1.1 200 OK
+Date: Thu, 08 Oct 2026 14:05:08 GMT
+Server: Apache/2.4.25 (Debian)
+Expires: Tue, 23 Jun 2009 12:00:00 GMT
+Cache-Control: no-cache, must-revalidate
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 4584
+Keep-Alive: timeout=5, max=97
+Connection: Keep-Alive
+Content-Type: text/html;charset=utf-8
+
+PD9waHANCg0KZGVmaW5lKCAnRFZXQV9XRUJfUEFHRV9UT19ST09UJywgJy4uLy4uLycgKTsNCnJlcXVpcmVfb25jZSBEVldBX1dFQl9QQUdFX1RPX1JPT1QgLiAnZHZ3YS9pbmNsdWRlcy9kdndhUGFnZS5pbmMucGhwJzsNCg0KZHZ3YVBhZ2VTdGFydHVwKCBhcnJheSggJ2F1dGhlbnRpY2F0ZWQnLCAncGhwaWRzJyApICk7DQoNCiRwYWdlID0gZHZ3YVBhZ2VOZXdHcmFiKCk7DQokcGFnZVsgJ3RpdGxlJyBdICAgPSAnVnVsbmVyYWJpbGl0eTogRmlsZSBJbmNsdXNpb24nIC4gJHBhZ2VbICd0aXRsZV9zZXBhcmF0b3InIF0uJHBhZ2VbICd0aXRsZScgXTsNCiRwYWdlWyAncGFnZV9pZCcgXSA9ICdmaSc7DQokcGFnZVsgJ2hlbHBfYnV0dG9uJyBdICAgPSAnZmknOw0KJHBhZ2VbICdzb3VyY2VfYnV0dG9uJyBdID0gJ2ZpJzsNCg0KZHZ3YURhdGFiYXNlQ29ubmVjdCgpOw0KDQokdnVsbmVyYWJpbGl0eUZpbGUgPSAnJzsNCnN3aXRjaCggJF9DT09LSUVbICdzZWN1cml0eScgXSApIHsNCgljYXNlICdsb3cnOg0KCQkkdnVsbmVyYWJpbGl0eUZpbGUgPSAnbG93LnBocCc7DQoJCWJyZWFrOw0KCWNhc2UgJ21lZGl1bSc6DQoJCSR2dWxuZXJhYmlsaXR5RmlsZSA9ICdtZWRpdW0ucGhwJzsNCgkJYnJlYWs7DQoJY2FzZSAnaGlnaCc6DQoJCSR2dWxuZXJhYmlsaXR5RmlsZSA9ICdoaWdoLnBocCc7DQoJCWJyZWFrOw0KCWRlZmF1bHQ6DQoJCSR2dWxuZXJhYmlsaXR5RmlsZSA9ICdpbXBvc3NpYmxlLnBocCc7DQoJCWJyZWFrOw0KfQ0KDQpyZXF1aXJlX29uY2UgRFZXQV9XRUJfUEFHRV9UT19ST09UIC4gInZ1bG5lcmFiaWxpdGllcy9maS9zb3VyY2UveyR2dWxuZXJhYmlsaXR5RmlsZX0iOw0KDQovLyBpZiggY291bnQoICRfR0VUICkgKQ0KaWYoIGlzc2V0KCAkZmlsZSApICkNCglpbmNsdWRlKCAkZmlsZSApOw0KZWxzZSB7DQoJaGVhZGVyKCAnTG9jYXRpb246P3BhZ2U9aW5jbHVkZS5waHAnICk7DQoJZXhpdDsNCn0NCg0KZHZ3YUh0bWxFY2hvKCAkcGFnZSApOw0KDQo/Pg0K
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>Vulnerability: File Inclusion :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>
+
+		<link rel="stylesheet" type="text/css" href="../../dvwa/css/main.css" />
+
+		<link rel="icon" type="\image/ico" href="../../favicon.ico" />
+
+		<script type="text/javascript" src="../../dvwa/js/dvwaPage.js"></script>
+
+	</head>
+
+	<body class="home">
+		<div id="container">
+
+			<div id="header">
+
+				<img src="../../dvwa/images/logo.png" alt="Damn Vulnerable Web Application" />
+
+			</div>
+
+			<div id="main_menu">
+
+				<div id="main_menu_padded">
+				<ul class="menuBlocks"><li class=""><a href="../../.">Home</a></li>
+<li class=""><a href="../../instructions.php">Instructions</a></li>
+<li class=""><a href="../../setup.php">Setup / Reset DB</a></li>
+</ul><ul class="menuBlocks"><li class=""><a href="../../vulnerabilities/brute/">Brute Force</a></li>
+<li class=""><a href="../../vulnerabilities/exec/">Command Injection</a></li>
+<li class=""><a href="../../vulnerabilities/csrf/">CSRF</a></li>
+<li class="selected"><a href="../../vulnerabilities/fi/.?page=include.php">File Inclusion</a></li>
+<li class=""><a href="../../vulnerabilities/upload/">File Upload</a></li>
+<li class=""><a href="../../vulnerabilities/captcha/">Insecure CAPTCHA</a></li>
+<li class=""><a href="../../vulnerabilities/sqli/">SQL Injection</a></li>
+<li class=""><a href="../../vulnerabilities/sqli_blind/">SQL Injection (Blind)</a></li>
+<li class=""><a href="../../vulnerabilities/weak_id/">Weak Session IDs</a></li>
+<li class=""><a href="../../vulnerabilities/xss_d/">XSS (DOM)</a></li>
+<li class=""><a href="../../vulnerabilities/xss_r/">XSS (Reflected)</a></li>
+<li class=""><a href="../../vulnerabilities/xss_s/">XSS (Stored)</a></li>
+<li class=""><a href="../../vulnerabilities/csp/">CSP Bypass</a></li>
+<li class=""><a href="../../vulnerabilities/javascript/">JavaScript</a></li>
+</ul><ul class="menuBlocks"><li class=""><a href="../../security.php">DVWA Security</a></li>
+<li class=""><a href="../../phpinfo.php">PHP Info</a></li>
+<li class=""><a href="../../about.php">About</a></li>
+</ul><ul class="menuBlocks"><li class=""><a href="../../logout.php">Logout</a></li>
+</ul>
+				</div>
+
+			</div>
+
+			<div id="main_body">
+
+				
+				<br /><br />
+				
+
+			</div>
+
+			<div class="clear">
+			</div>
+
+			<div id="system_info">
+				<input type="button" value="View Help" class="popup_button" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=fi&security=low' )"> <input type="button" value="View Source" class="popup_button" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=fi&security=low' )"> <div align="left"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> disabled</div>
+			</div>
+
+			<div id="footer">
+
+				<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>
+				<script src='/dvwa/js/add_event_listeners.js'></script>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
