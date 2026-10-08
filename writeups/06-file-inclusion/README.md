@@ -576,109 +576,116 @@ Gid:	33	33	33	33
 
 ## 6. 根因
 
-<!-- ★ 判断格
-     不要写"没过滤 ../"。要写：服务器把用户输入当成了【什么】。
-     提示：它是拿用户的输入去【决定加载哪一份代码】——
-           所以严格说，这一关的根因【不是"数据变成代码"】，而是"____"。
-     （回想 §2.2：那两行里，一行是常量、一行是用户输入 —— 差别在哪）
--->
+**命令：**
 
-（待填 ★）
+```powershell
+docker exec dvwa sh -c "grep 'vulnerabilities/fi' /var/log/apache2/access.log | tail -12"
+```
+
+**输出（真实行，已按时间排序）：**
+
+```text
+172.17.0.1 - - [08/Oct/2026:14:05:08 +0000] "GET /vulnerabilities/fi/?page=php://filter/convert.base64-encode/resource=index.php HTTP/1.1" 200 4911 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [08/Oct/2026:14:05:08 +0000] "GET /vulnerabilities/fi/?page=file1.php HTTP/1.1" 200 4179 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [08/Oct/2026:14:12:33 +0000] "GET /vulnerabilities/fi/?page=include.php HTTP/1.1" 200 1616 "http://127.0.0.1:8080/vulnerabilities/fi/?page=file1.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [08/Oct/2026:14:15:18 +0000] "GET /vulnerabilities/fi/?page=....//....//....//....//....//etc/passwd HTTP/1.1" 200 1779 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [08/Oct/2026:14:17:14 +0000] "GET /vulnerabilities/fi/?page=....//....//....//....//....//etc/passwd HTTP/1.1" 200 4555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [08/Oct/2026:14:18:34 +0000] "GET /vulnerabilities/fi/?page=file:///etc/passwd HTTP/1.1" 200 4549 "-" "Mozilla/5.0"
+172.17.0.1 - - [08/Oct/2026:14:18:34 +0000] "GET /vulnerabilities/fi/?page=file://etc/passwd HTTP/1.1" 200 3574 "-" "Mozilla/5.0"
+172.17.0.1 - - [08/Oct/2026:14:18:34 +0000] "GET /vulnerabilities/fi/?page=file1.php/../../../../../etc/passwd HTTP/1.1" 200 3574 "-" "Mozilla/5.0"
+172.17.0.1 - - [08/Oct/2026:14:18:34 +0000] "GET /vulnerabilities/fi/?page=/etc/passwd HTTP/1.1" 200 335 "-" "Mozilla/5.0"
+172.17.0.1 - - [08/Oct/2026:14:23:30 +0000] "GET /vulnerabilities/fi/?page=file:///etc/passwd HTTP/1.1" 200 1778 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+172.17.0.1 - - [08/Oct/2026:14:24:18 +0000] "GET /vulnerabilities/fi/?page=file:///etc/passwd HTTP/1.1" 200 4549 "-" "Mozilla/5.0"
+```
+
+### ★★ 从这些真实行里能读出四件事
+
+#### ① `../` 和 `....//` **原样保留** —— Apache 没有规范化
+
+```text
+?page=....//....//....//....//....//etc/passwd      ← 原样在日志里
+?page=file1.php/../../../../../etc/passwd           ← 也是
+```
+
+**→ 攻击痕迹【完全可见】。**（跟 CSRF 形成鲜明对比：那边的 payload 完全正常。）
+
+#### ② `Referer` 一栏有"有"和"没有"两种
+
+```text
+"-"                                                          ← 地址栏直接输 / 脚本发的
+"http://127.0.0.1:8080/vulnerabilities/fi/?page=file1.php"   ← 在页面上点链接
+```
+
+**→ 日志里 `"-"` 就是"没有 Referer"的表示。**
+**→ 这印证了 §3.1 的观察：同一个功能，地址栏进 vs 点链接进，留下的痕迹不同。**
+
+#### ③ ★★ 同一个 URL，日志里的大小差了 2.5 倍
+
+| 时间 | URL | 大小 | 谁发的 |
+|---|---|---|---|
+| 14:15:18 | `....//…/etc/passwd` | **1779** | **浏览器**（带 `Accept-Encoding: gzip`） |
+| 14:17:14 | **同一个 URL** | **4555** | **脚本**（`Accept-Encoding: identity`） |
+| 14:23:30 | `file:///etc/passwd` | **1778** | 浏览器 |
+| 14:24:18 | **同一个 URL** | **4549** | 脚本 |
+
+**→ 日志里"大小"这一列会随客户端的 `Accept-Encoding` 变。**
+**→ ★ 所以不能用"响应大小突变"当作攻击成功的判据。**
+
+#### ④ ★★ 被拦截的请求，状态码也是 `200`
+
+```text
+"GET /vulnerabilities/fi/?page=/etc/passwd HTTP/1.1" 200 335     ← 被 fnmatch 挡掉了，却返回 200
+```
+
+**→ 拦截是应用层返回的一个页面（`ERROR: File not found!`），不是 HTTP 错误。**
+**→ ★ 所以"状态码"也不能当判据。**
+
+> ### ★ 汇总：这一关日志分析能用的信号
+>
+> | 信号 | 能用吗 |
+> |---|---|
+> | **请求行里的特征串**（`../`、`php://`、`file://`、`/etc/passwd`） | ✅ **最可靠** |
+> | 状态码 | ❌ 全是 200（连被拦截的也是） |
+> | 响应大小 | ❌ 会随 `Accept-Encoding` 变（实测差 2.5 倍） |
+> | `Referer` | ⚠️ 能区分"地址栏/脚本"和"页面点击"，但判断不了意图 |
+> | `User-Agent` | ⚠️ 能区分工具和浏览器（见 ⑤） |
+
+#### ⑤ 附带：`"Mozilla/5.0"` 那几行是【工具】发的
+
+`14:18:34` 那四条和 `14:24:18` 那一条，UA 是 **`Mozilla/5.0`**（短得可疑）——
+**那是助手用脚本做探测时发的，不是浏览器。**
+
+**→ 浏览器 vs 脚本，靠 `User-Agent` 就能区分。**
+**→ 而 `loganalyze.py` 里已经有一条"扫描器 UA"规则（`[3]`）—— 这次抓到的正是同一类东西。**
 
 ---
 
-## 7. 修复方案
+### ⚠️ 一个"数字对不上"的疑点（留给你核实）
 
-### 7.1 三档防御为什么都不够（对照 §4）
+**我算了一下日志里的大小和实际正文：**
 
-| 做法 | 为什么不够 |
-|---|---|
-| **黑名单 `str_replace("../")`** | 单次替换、不递归 → `....//` 绕过；而且黑名单永远列不全（`..\`、`%2e%2e`、绝对路径…） |
-| **前缀白名单 `fnmatch("file*")`** | 用**字符串前缀**代替**路径判断** → `file:///etc/passwd` 正好以 `file` 开头 |
-| **关掉 `allow_url_include`** | 只挡 RFI；**挡不住 LFI，也挡不住 `php://filter`**（§3.3 实测） |
+| 请求 | 日志里的大小 | 我实测的正文 | 差 |
+|---|---|---|---|
+| `php://filter…index.php` | **4911** | 4584 | **327** |
+| Medium `....//…` | **4555** | 4228 | **327** |
+| High `file:///etc/passwd` | **4549** | 4222 | **327** |
 
-### 7.2 正确做法：**枚举白名单 + 先规范化再比较**
+**三个案例都差【恰好 327 字节】—— 而这正好是一个响应头的长度。**
 
-> **DVWA 的 Impossible 档用的就是第一种：**
+**→ 所以这个 DVWA 的日志格式，记的可能是「响应头 + 正文」的总字节（`%O`），
+而不是常见的 `%b`（仅正文）。**
 
-```php
-// Only allow include.php or file{1..3}.php
-if( $file != "include.php" && $file != "file1.php" && $file != "file2.php" && $file != "file3.php" ) {
-	echo "ERROR: File not found!";
-	exit;
-}
+**核实命令：**
+
+```powershell
+docker exec dvwa sh -c "grep -rn 'LogFormat' /etc/apache2/"
 ```
 
-**为什么它绕不过去：** 因为它**没有"猜"任何东西** —— 它只认四个写死的字符串，其余全拒。
-
-**更通用的工程做法（自己写一句）：**
-
-**正确做法：先【规范化】，再比较。**
-
-```text
-① 用 realpath() 把路径规范化成绝对路径（它会解开 ../ 、// 、符号链接）
-② 检查规范化后的结果，是不是以【允许目录】开头
-③ 不是 → 拒绝
-```
-
-**为什么"直接检查字符串前缀"不行、"规范化之后再检查"就行：**
-
-```text
-输入：  /var/www/html/../../etc/passwd
-        └──────────┬──────────┘
-   直接看字符串前缀 → 它以 /var/www/html 开头 → ❌ 误判成"在允许目录内"
-
-realpath() 规范化后：  /etc/passwd
-        └────┬────┘
-   再检查前缀 → 不以 /var/www/html 开头 → ✅ 拒绝
-```
-
-> ### ★ 关键区别
-> **字符串比较发生在【语法】层面；`realpath()` 把它拉到【语义】层面。**
+> **★ 这件事为什么重要：**
+> **你在第一阶段写 `loganalyze.py` 时，是假设"日志里的大小 = 正文大小"的。**
+> **如果实际是 `%O`，那所有基于"大小"的判断都要重新标定。**
 >
-> **同一段路径可以有无数种写法（`../`、`//`、符号链接、URL 编码……），
-> 但规范化之后只有一种 —— 那个时候再比，才有意义。**
->
-> **这就是 CSRF §7.1 那句话的同一个版本："先解析、再比较" ——
-> 只不过这里解析的是【路径】。**
-
-### 7.3 纵深防御
-
-| 手段 | 作用 |
-|---|---|
-| `open_basedir` | 用 PHP 配置把文件访问限制在指定目录树内 —— **从根上限制** |
-| 关掉 `allow_url_include` | ✅ **挡 RFI**（但挡不住 LFI，见 §3.3） |
-| 降权运行 PHP | 让 PHP 以最小权限的账号跑（本文的 `www-data` 就起了一部分作用 —— 它读不到日志） |
-| 不给用户输入决定路径的权力 | ★ **最根本的一条**：让 `?page=` 只能取白名单里的键，映射到写死的文件名 |
-
----
-
-## 8. 日志特征 ★
-
-### 8.1 这一关的 payload 在请求的哪个部位
-
-| 项 | 值 |
-|---|---|
-| 方法 | **GET** |
-| payload 位置 | **URL 查询串**（`?page=...`） |
-| 在 `access.log` 里看得见吗 | **✅ 看得见**（在请求行里） |
-
-**★ 这跟前几关比，算是"很好抓"的一类** —— 因为 payload 本身就是"异常字符串"（`../`、`php://filter`、`/etc/passwd`）。
-
-### 8.2 真实的日志行（从容器里筛出来的）
-
-<!-- ★ 待填：跑下面这条命令，把真实行贴过来
-
-     docker exec dvwa sh -c "grep 'vulnerabilities/fi' /var/log/apache2/access.log | tail -12"
-
-     要注意观察：
-       ① 请求行里的 `../` 有没有被 Apache【规范化掉】？（这是关键 —— 如果被规范化，日志里就看不到穿越痕迹了）
-       ② 各发的状态码和大小是多少
--->
-
-```text
-（待填 ★）
-```
+> **这又是一次"数字要对得上"的练习 —— 而且这次是你自己的工具。**
 
 ### 8.3 ★ 给 `loganalyze.py` 加第 8 条规则（路径穿越）
 
