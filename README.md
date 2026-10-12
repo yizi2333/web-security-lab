@@ -28,8 +28,18 @@ security-lab这个仓库里是我自己用Python写的三个小工具，用来�
 | **03** | [SQL Injection](writeups/03-sql-injection/) | Low | 同样是"数据变成语法"，但这次的杠杆是**一对单引号** | 555 | 2 份 |
 | **04** | [XSS](writeups/04-xss/)（反射 / 存储 / DOM） | Low | 三种的区别只有一个问题：**那段 HTML 字符串，是在哪里被拼出来的** | 1003 | 6 份 |
 | **05** | [CSRF](writeups/05-csrf/)（跨站请求伪造） | Low | 服务器把「**带着有效 cookie**」当成了「**用户的真实意图**」<br>—— 而这两发请求，服务器**根本分辨不出来** | 658 | 6 份 |
+| **06** | [File Inclusion](writeups/06-file-inclusion/) | Low · Medium · High | ⬜ **待填：一句话关键结论**（第三节的 §0 写完了一起补） | 843 | 11 份 |
 
-**合计 3287 行**，23 份原始证据（全部是真实抓包，存在各自的 `raw/`）
+**合计 4130 行**，34 份原始证据（全部是真实抓包，存在各自的 `raw/`）
+
+> ⚠️ **数字要跟着文件走。** 这个表里每一个数都是数出来的，不是估的 ——
+> 加一篇 writeup 就要同时改「行数」「报文」「合计」三处，漏一处就会出现
+> **README 说 5 篇、简历说 6 篇** 的矛盾。面试官点开仓库就会看到。
+> 重跑核对：
+> ```powershell
+> Get-ChildItem writeups -Recurse -Filter README.md | ForEach-Object { (Get-Content $_).Count }
+> (Get-ChildItem writeups -Recurse -File | Where-Object { $_.FullName -match '\\raw\\' }).Count
+> ```
 
 ---
 
@@ -74,7 +84,7 @@ security-lab这个仓库里是我自己用Python写的三个小工具，用来�
 | 12 | 脚本跑完**没报错**，writeup 却少了两个小节 | 定位"注释块开头"时写了 `rfind("<!--", 0, i)`，而 `i` **正好就是那个 `<!--` 的位置** → 往前找到了【上一个】注释 → 替换区间跨过了 §7、§8 两整节。<br>★ **而 `assert c >= 0` 是通过的 —— 它只检查"找到了吗"，没检查"找对了吗"** | 06 FI |
 
 <!-- ★ 一句总结（这是 README 里最值钱的一句，面试会问）
-     提示：这 8 个的共同结构是什么？
+     提示：这 12 个的共同结构是什么？
            "我看到的" 和 "事实" 之间，隔了一层什么？
      再想：这对做安全分析/取证意味着什么？ -->
 
@@ -124,7 +134,7 @@ for_ask/                  我自己攒的问题清单（问到答案就补在同
 | Brute Force | ✅ | ⬜ | ⬜ |
 | Command Injection | ✅ | ✅ | ⬜ |
 | CSRF | ✅ | ⬜ | ⬜ |
-| File Inclusion | ⬜ | ⬜ | ⬜ |
+| File Inclusion | ✅ | ✅ | ✅ |
 | File Upload | ⬜ | ⬜ | ⬜ |
 | Insecure CAPTCHA | ⬜ | ⬜ | ⬜ |
 | SQL Injection | ✅ | ⬜ | ⬜ |
@@ -136,7 +146,14 @@ for_ask/                  我自己攒的问题清单（问到答案就补在同
 | CSP Bypass | ⬜ | ⬜ | ⬜ |
 | JavaScript | ⬜ | ⬜ | ⬜ |
 
-**Low 档 7 / 14** ｜ 含 Medium 共 8 项 ｜ writeup 5 篇 / 3287 行
+**Low 档 8 / 14** ｜ 含 Medium 共 10 项 ｜ writeup 6 篇 / 4130 行
+
+> ★ **「打通」和「写完」是两件事，这张表记的是前者。**
+> File Inclusion 的 Low / Medium / High 三档都已实测打通（三档都真读到了 `/etc/passwd`），
+> 但那篇 writeup 还差 15 格没收尾（见 `writeups/06-file-inclusion/README.md`）。
+>
+> 这个区分在面试里很重要：被问「这个模块你做到什么程度」，
+> 答「**打通了，但笔记还没写完**」比含糊说「做了」可信得多。
 
 ---
 
